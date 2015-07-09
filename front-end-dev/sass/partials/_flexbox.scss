@@ -1,0 +1,20 @@
+// _flexbox.scss
+
+/* Flexbox model */
+// generische partial voor flexbox
+
+// mixin voor flexbox container
+@mixin flexbox ($direction: column) {
+  // $direction   row|column
+  // column default
+  display: -webkit-flex;;
+  display: flex;
+  // default main axis direction en flex-wrap
+  -webkit-flex-flow: $direction wrap;
+  flex-flow: $direction wrap;
+}
+
+// column class gemaakt van mixin
+.flexbox {
+  @include flexbox;
+}
